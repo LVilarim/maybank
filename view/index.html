@@ -8,12 +8,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="icon" type="image/png" href="/images/IsotipoMB.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="flex flex-col min-h-screen bg-gray-100 overflow-x-hidden bg-white">
 
   <!-- HEADER -->
-  <header class=" bg-white shadow-md px-8 py-2 relative z-50">
+  <header id="site-header"
+    class="bg-white shadow-md px-8 py-6 z-50 fixed top-0 left-0 w-full transition-all duration-300">
     <nav class="flex items-center justify-center">
       <!-- Logo -->
       <div class="flex-shrink-0 mr-10">
@@ -57,7 +59,8 @@
         <div class="col-span-1">
           <img src="../images/maybankmulherjaqueta.jpeg" alt="Nu Empresas" class="w-full h-[100px] mb-4 rounded-lg">
           <h2 class="text-xl text-[27px] font-semibold mb-2">MB Empresas</h2>
-          <p class="text-gray-700 text-[17px] mb-14">Conta 100% digital, zero tarifas, gestão descomplicada de pagamentos, área de
+          <p class="text-gray-700 text-[17px] mb-14">Conta 100% digital, zero tarifas, gestão descomplicada de
+            pagamentos, área de
             cobranças e mais.</p>
           <a href="#" class="text-[#daa520] text-[27px] font-semibold hover:text-[#1d4a23]">Conheça o MB Empresas
             &rarr;</a>
@@ -127,65 +130,73 @@
 
 
   <!-- CONTEÚDO PRINCIPAL -->
-  <main class="flex-grow flex flex-col items-center justify-center gap-8 bg-white py-10">
-    <div class="w-full max-w-6xl">
-      <!-- Texto alinhado à esquerda -->
-      <p class="text-gray-900 text-2xl font-bold text-left">
-        Resolva as questões do dia a dia
-      </p>
-      <p class="text-gray-400 text-1xl text-left">
-        Com apenas alguns cliques
-      </p>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-      <!-- BOLETO -->
-      <button
-        class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
-        <i data-lucide="barcode" class="w-7 h-7 text-gray-700"></i>
-        <span class="mt-2 text-gray-900 font-semibold">Boleto</span>
-        <span class="text-sm text-gray-500">Emita 2ª via</span>
-      </button>
+  <main class="flex-grow bg-white pt-28">
 
-      <!-- DESBLOQUEIO DE CARTÃO -->
-      <button
-        class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
-        <i data-lucide="credit-card" class="w-7 h-7 text-gray-700"></i>
-        <span class="mt-2 text-gray-900 font-semibold">Cartão</span>
-        <span class="text-sm text-gray-500">Desbloqueie o seu</span>
-      </button>
+    <section class="bg-white">
+      <div class="w-full max-w-6xl mx-auto px-6">
 
-      <!-- APLICATIVOS -->
-      <button
-        class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
-        <i data-lucide="smartphone" class="w-7 h-7 text-gray-700"></i>
-        <span class="mt-2 text-gray-900 font-semibold">Aplicativos</span>
-        <span class="text-sm text-gray-500">Baixe os apps</span>
-      </button>
+        <!-- Texto -->
+        <p class="text-gray-900 text-2xl font-bold">
+          Resolva as questões do dia a dia
+        </p>
+        <p class="text-gray-400 text-1xl">
+          Com apenas alguns cliques
+        </p>
 
-      <!-- PIX -->
-      <button
-        class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
-        <i data-lucide="scan-line" class="w-7 h-7 text-gray-700"></i>
-        <span class="mt-2 text-gray-9004444 font-semibold">Pix</span>
-        <span class="text-sm text-gray-500">24 horas</span>
-      </button>
+        <!-- Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-items-center mt-6">
 
-      <!-- COMPROVANTES -->
-      <button
-        class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
-        <i data-lucide="receipt" class="w-7 h-7 text-gray-700"></i>
-        <span class="mt-2 text-gray-900 font-semibold">Comprovante</span>
-        <span class="text-sm text-gray-500">Emita a 2ª via</span>
-      </button>
+          <!-- BOLETO -->
+          <button
+            class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
+            <i data-lucide="barcode" class="w-7 h-7 text-gray-700"></i>
+            <span class="mt-2 text-gray-900 font-semibold">Boleto</span>
+            <span class="text-sm text-gray-500">Emita 2ª via</span>
+          </button>
 
-      <!-- ATENDIMENTO -->
-      <button
-        class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
-        <i data-lucide="headphones" class="w-7 h-7 text-gray-700"></i>
-        <span class="mt-2 text-gray-900 font-semibold">Atendimento</span>
-        <span class="text-sm text-gray-500">Canais de ajuda</span>
-      </button>
-    </div>
+          <!-- CARTÃO -->
+          <button
+            class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
+            <i data-lucide="credit-card" class="w-7 h-7 text-gray-700"></i>
+            <span class="mt-2 text-gray-900 font-semibold">Cartão</span>
+            <span class="text-sm text-gray-500">Desbloqueie o seu</span>
+          </button>
+
+          <!-- APLICATIVOS -->
+          <button
+            class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
+            <i data-lucide="smartphone" class="w-7 h-7 text-gray-700"></i>
+            <span class="mt-2 text-gray-900 font-semibold">Aplicativos</span>
+            <span class="text-sm text-gray-500">Baixe os apps</span>
+          </button>
+
+          <!-- PIX -->
+          <button
+            class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
+            <i data-lucide="scan-line" class="w-7 h-7 text-gray-700"></i>
+            <span class="mt-2 text-gray-900 font-semibold">Pix</span>
+            <span class="text-sm text-gray-500">24 horas</span>
+          </button>
+
+          <!-- COMPROVANTE -->
+          <button
+            class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
+            <i data-lucide="receipt" class="w-7 h-7 text-gray-700"></i>
+            <span class="mt-2 text-gray-900 font-semibold">Comprovante</span>
+            <span class="text-sm text-gray-500">Emita a 2ª via</span>
+          </button>
+
+          <!-- ATENDIMENTO -->
+          <button
+            class="flex flex-col items-center justify-center bg-white rounded-xl w-40 h-32 border border-gray-300 hover:border-[#daa520] hover:shadow-md transition">
+            <i data-lucide="headphones" class="w-7 h-7 text-gray-700"></i>
+            <span class="mt-2 text-gray-900 font-semibold">Atendimento</span>
+            <span class="text-sm text-gray-500">Canais de ajuda</span>
+          </button>
+
+        </div>
+      </div>
+    </section>
 
     <section class="mt-[200px] min-h-screen flex justify-center items-center">
       <div class="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-16 items-center px-6">
@@ -193,8 +204,8 @@
         <!-- Texto à esquerda -->
         <div class="flex flex-col mb-12 justify-center text-left space-y-4">
           <h2 class="text-6xl font-extrabold text-gray-900">
-            Tudo em um <span class="text-9xl text-[#1d4a23]">único</span> <span
-              class="text-9xl text-[#daa520]">lugar</span>
+            Tudo em um <span class="text-9xl text-[#1d4a23]">único</span>
+            <span class="text-9xl text-[#daa520]">lugar</span>
           </h2>
           <p class="text-gray-500 mt-6 text-2xl max-w-lg">
             Chega de múltiplos aplicativos para ter o controle de suas finanças
@@ -246,28 +257,28 @@
       </div>
     </section>
 
+    <!-- C8D1B8 -->
+    <section class="bg-[#2F5E3A] min-h-screen w-full flex items-center">
+      <div class="container mx-auto px-8 lg:px-16 py-20">
 
-    <section class="min-h-screen">
-      <div class="bg-white py-16 max-w-6xl">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-2 items-center">
 
           <!-- Texto -->
-          <div class="text-left">
-            <h2 class="text-5xl font-bold text-gray-900 mb-4">
-              <b>Simplifique com <br class="hidden sm:block"> a MBInvestimento</b>
+          <div>
+            <h2 data-aos="flip-up"class="text-5xl font-bold text-[#111110] mb-6 leading-tight">
+              Simplifique com <br class="hidden sm:block"> a MBInvestimento
             </h2>
-            <p class="text-gray-700 text-lg mb-6">
+
+            <p class="text-gray-100 text-lg mb-8">
               Soluções pensadas para você cuidar do seu negócio com menos burocracias e complexidade.
             </p>
 
-            <!-- Botão -->
             <a href="#"
-              class="flex justify-center items-center bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-full transition mb-4 mt-8 w-[350px]">
+              class="bg-green-700 hover:bg-[#193C20] text-white font-semibold px-6 py-3 rounded-full transition w-[300px] flex justify-center">
               Quero ser cliente MB
             </a>
 
-            <!-- Setas do carrossel -->
-            <div class="flex gap-4">
+            <div class="flex gap-4 mt-10">
               <button id="cartaoPrevBtn"
                 class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold px-4 py-2 rounded-full">
                 &#8592;
@@ -280,24 +291,24 @@
           </div>
 
           <!-- Imagem / Carrossel -->
-          <div class="overflow-hidden relative w-full min-h-[600px] lg:min-h-[600px]">
-            <img src="/images/cartaombfrente.png" alt="Cartão 1"
-              class="cartao-slide absolute inset-0 w-full transition-opacity duration-200 opacity-100">
-            <img src="/images/cartaombverdeescuro.png" alt="Cartão 2"
-              class="cartao-slide absolute inset-0 w-full transition-opacity duration-200 opacity-0">
-            <img src="/images/cartaombbusiness.png" alt="Cartão 3"
-              class="cartao-slide absolute inset-0 w-full transition-opacity duration-200 opacity-0">
+          <div data-aos="slide-left" data-aos-duration="1000"class="relative w-full flex justify-center">
+            <div class="relative w-full max-w-[800px] min-h-[900px]">
+              <img src="/images/cartaombfrente.png"
+                class="cartao-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-200 opacity-100">
+
+              <img src="/images/cartaombverdeescuro.png"
+                class="cartao-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-200 opacity-0">
+
+              <img src="/images/cartaombbusiness.png"
+                class="cartao-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-200 opacity-0">
+            </div>
           </div>
 
         </div>
       </div>
     </section>
 
-
-
-
-
-    <section class="bg-white py-20 min-h-screen ">
+    <section class="bg-[#F7F3E9] min-h-screen w-full flex items-center !pb-0 !mb-0">
       <div class="max-w-6xl mx-auto px-6 text-center">
         <h2 class="text-5xl md:text 4xl font-bold text-gray-900 text-right font-poppins leading-tight">
           <b>MB é sinônimo de segurança!</b>
@@ -306,9 +317,9 @@
           Tecnologia e cuidado humano para proteger você e o seu negócio.
         </p>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-3 gap-3">
           <!-- Atendimento 24h -->
-          <div class="p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
             <div class="flex items-center justify-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -326,7 +337,7 @@
           </div>
 
           <!-- Autenticação 2 fatores -->
-          <div class="p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
             <div class="flex items-center justify-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -344,7 +355,7 @@
           </div>
 
           <!-- Bloqueio de cartão -->
-          <div class="p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
             <div class="flex items-center justify-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -364,7 +375,7 @@
       </div>
     </section>
 
-    <section class="max-w-[1900px] min-h-screen">
+    <section class="max-w-[1900px] bg-[#C8D1B8] min-h-screen flex items-center">
       <div class="lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mr-20">
 
         <!-- Imagem à esquerda -->
@@ -375,7 +386,7 @@
         <!-- Conteúdo à direita -->
         <div class="text-black">
           <h2 class="text-4xl lg:text-7xl font-bold mb-4 font-poppins tracking-wide leading-tight"><b>Conheça a
-              <span class="text-[#1d4a23]">May</span><span class="text-[#daa520]">Pay</span>
+              <span class="text-[#f0f0f0]">May</span><span class="text-[#daa520]">Pay</span>
           </h2>
           <p class="text-black-100 text-lg mb-8 w-[600px]">
             Soluções completas para quem quer fazer seu negócio crescer com tecnologia e simplicidade.
@@ -412,22 +423,15 @@
 
 
 
-  <!-- FOOTER -->
-  <footer class="bg-black text-gray-300 text-sm min-h-screen flex flex-col justify-between">
+  <!-- FOOTER 111110-->
+  <footer class="bg-[#111110] text-gray-300 text-sm min-h-screen flex flex-col justify-between pt-24">
+
     <!-- Colunas de links -->
-    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-      <div>
-        <h3 class="text-gray-500 font-semibold mb-3">Transparência</h3>
-        <ul class="space-y-1">
-          <li><a href="#" class="hover:text-white font-medium">Política de privacidade</a></li>
-          <li><a href="#" class="hover:text-white font-medium">Política de segurança</a></li>
-          <li><a href="#" class="hover:text-white font-medium">Termos de Uso</a></li>
-          <!-- adicione os outros links -->
-        </ul>
-      </div>
+    <div class="max-w-7xl mx-auto px-12 py-10 grid grid-cols-2 md:grid-cols-3 gap-8">
+
       <div>
         <h3 class="text-xl font-semibold mb-6 text-gray-400">Transparência</h3>
-        <ul class="space-y-2">
+        <ul class="space-y-3">
           <li><a href="#" class="hover:text-white transition">Política de privacidade</a></li>
           <li><a href="#" class="hover:text-white transition">Política de segurança</a></li>
           <li><a href="#" class="hover:text-white transition">Termos de Uso</a></li>
@@ -447,7 +451,7 @@
       <!-- Explorar -->
       <div>
         <h3 class="text-xl font-semibold mb-6 text-gray-400">Explorar</h3>
-        <ul class="space-y-2">
+        <ul class="space-y-3">
           <li><a href="#" class="hover:text-white transition font-semibold">Blog</a></li>
           <li><a href="#" class="hover:text-white transition font-semibold">Comunidade do MbInvestimento</a></li>
           <li><a href="#" class="hover:text-white transition font-semibold">Mb Asset</a></li>
@@ -464,7 +468,7 @@
       <!-- Imprensa / Fale Conosco -->
       <div>
         <h3 class="text-xl font-semibold mb-6 text-gray-400">Imprensa</h3>
-        <ul class="space-y-2">
+        <ul class="space-y-3">
           <li><a href="#" class="hover:text-white transition font-semibold">Sala de Imprensa</a></li>
           <li class="text-gray-400">Ajuda</li>
           <li><a href="#" class="hover:text-white transition font-semibold">Segurança</a></li>
@@ -664,8 +668,43 @@
 
     updateCarousel();
 
-  </script>
+    document.addEventListener("scroll", () => {
+      const header = document.getElementById("site-header");
 
+      if (window.scrollY > 20) {
+        header.classList.add(
+          "bg-white/30",      // fundo semi-transparente
+          "backdrop-blur-md", // blur no background
+          "shadow-sm"         // sombra mais suave
+        );
+        header.classList.remove("bg-white", "shadow-md");
+      } else {
+        header.classList.add("bg-white", "shadow-md");
+        header.classList.remove(
+          "bg-white/30",
+          "backdrop-blur-md",
+          "shadow-sm"
+        );
+      }
+
+      document.querySelectorAll("#site-header, #btn1, #btn2, #btn3, #site-header a")
+        .forEach(el => {
+          el.addEventListener("click", () => {
+            header.classList.remove("bg-white/30", "backdrop-blur-md", "shadow-sm");
+            header.classList.add("bg-white", "shadow-md");
+          });
+        });
+    });
+    // 2. Voltar ao estado original quando clicar em algo no header
+
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 </body>
 <script src="/js/cartaocarrossel.js"></script>
 <!-- Adicione essa animação personalizada -->
